@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/project.css">
+	<script src="js/jquery-1.11.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+</head>
+
+<body>
+<div class="container">
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Create a New Project
+  </button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Create a New Project</h4>
+      </div>
+      <div class="modal-body">
+
+			<div class="row">
+				<div class="col-md-12">
+			<label for="Type of Product" class="control-label">What type of research project is it?</label>
+				<div class="radio">
+					<label>
+						<input type="radio" class="ProjectType" name="optionsRadios" id="optionsRadios1" value="option1"> Externally Funded Research
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" class="ProjectType" name="optionsRadios" id="optionsRadios2" value="option2">Academic Research/Internally Funded Research
+					</label>
+				</div>
+
+
+
+				<div class="row hidden" id="FundedProjectSection">
+					<div class="col-md-12">
+				<label for="ProjectId">Please input your Project ID (e.g. SP10000)</label>
+				<input type="ProjectId" class="form-control" id="ProjectId" placeholder="SP10000">
+			</div>
+			</div>
+
+
+					<div class="row">
+						<div class="col-md-6">
+					<label for="College" class="control-label">College</label>
+						<select class="form-control" id="College">
+									<option>Choose One</option>
+                  <option>College of Art & Sciences</option>
+                  <option>Robinson College of Business</option>
+                  <option>School of Nursing and Health Professions</option>
+                  <option>College of Education and Human Development</option>
+                  <option>School of Public Health</option>
+                  <option>Andrew Young School of Policy Studies</option>
+                  <option>College of Law</option>
+                  <option>Institute of Biomedical Sciences</option>
+                  <option>Research Centers</option>
+                  <option>Other</option>
+						</select>
+					</div>
+						<div class="col-md-6">
+					<label for="Department" class="control-label">Department</label>
+					<input class="form-control" type="text" id="Department" placeholder="Department Name">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+				<label for="Description">Briefly describe the research you will be conducting.</label>
+				<textarea class="form-control" rows="3"></textarea>
+			</div>
+		</div>
+
+						<div class="row">
+							<div class="col-md-6">
+							<label for="Startdate">Project Start Date</label>
+								<input type='text' class="datepicker form-control" />
+							</div>
+
+						<div class="col-md-6">
+							<label for="Enddate">Project End Date</label>
+								<input type='text' class="datepicker form-control" />
+							</div>
+						</div>
+
+					<h3> Principal Investigator </h3>
+
+					<div class="row">
+						<div class="col-md-6">
+							<label for="principalInvestigator">Principal Investigator/Faculty Advisor</label>
+								<input type='text' class="PeoplePicker form-control" placeholder="Jane Doe" />
+							</div>
+
+						<div class="col-md-6">
+							<label for="email">E-Mail</label>
+								<input type='text' class="form-control" placeholder="jdoe2@email.com" />
+							</div>
+						</div>
+
+						<h3>Project Personnel</h3>
+						<p>Search for the person you wish to add to this project.</p>
+
+						<!-- <div class="row">
+							<div class="col-md-6">
+								<label for="projectPersonnel">Project Personnel</label>
+									<input type='text' class="PeoplePicker form-control" />
+								</div>
+
+							<div class="col-md-6">
+								<label for="email">E-Mail</label>
+									<input type='text' class="form-control" />
+								</div>
+							</div> -->
+
+							<div class="row">
+								<div class="col-md-12">
+							<table class="table">
+								<thread>
+									<tr>
+										<th>Name</th>
+										<th>E-Mail</th>
+									</tr>
+								</thread>
+								<tbody>
+									<tr>
+										<td>
+												<input type='text' class="PeoplePicker form-control" placeholder="John Doe" />
+										</td>
+										<td>
+											<input type='text' class="form-control" placeholder="jdoe2@email.com" />
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Create Project</button>
+
+
+						</div>
+					</div>
+				</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="js/app.js">
+	</script>
+
+</body>
+</html>
